@@ -1,5 +1,6 @@
 package com.example.myofflinedatabase
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -7,7 +8,7 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 
-class MainActivity : AppCompatActivity() {
+class RegisterPage : AppCompatActivity() {
 
     lateinit var name: TextInputEditText
     lateinit var email: TextInputEditText
@@ -32,12 +33,13 @@ class MainActivity : AppCompatActivity() {
             Log.d("=======", "onCreate: ${password.text}")
 
 
-            var MyDatbaseclass = MyDatbaseclass(this@MainActivity)
+            var MyDatbaseclass = MyDatbaseclass(this@RegisterPage)
 
 
             MyDatbaseclass.InsertData(name.text.toString(),email.text.toString(),password.text.toString())
 
-
+            startActivity(Intent(this@RegisterPage,LoginPage::class.java))
+            finish()
         }
 
 

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".RegisterPage">
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -32,16 +32,14 @@
 
     <EditText
         android:id="@+id/password"
-        android:hint="Enetr YOur Password"
+        android:hint="Enter Your Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
-
      <Button
          android:layout_width="match_parent"
          android:text="Submit"
          android:id="@+id/submit"
-         android:layout_height="wrap_content"></Button>
+         android:layout_height="wrap_content"/>
 
 
 </LinearLayout>
